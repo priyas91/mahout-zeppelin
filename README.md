@@ -9,6 +9,15 @@ spark.kryo.registrator  ->	org.apache.mahout.sparkbindings.io.MahoutKryoRegistra
 spark.serializer        ->	org.apache.spark.serializer.KryoSerializer
 ```
 
+Add the following dependencies to said interpretter: (TODO: change these to maven)
+```
+artifact	
+/home/username/.m2/repository/org/apache/mahout/mahout-math/0.12.1-SNAPSHOT/mahout-math-0.12.1-SNAPSHOT.jar	
+/home/username/.m2/repository/org/apache/mahout/mahout-math-scala_2.10/0.12.1-SNAPSHOT/mahout-math-scala_2.10-0.12.1-SNAPSHOT.jar	
+/home/username/.m2/repository/org/apache/mahout/mahout-spark_2.10/0.12.1-SNAPSHOT/mahout-spark_2.10-0.12.1-SNAPSHOT.jar	
+/home/username/.m2/repository/org/apache/mahout/mahout-spark-shell_2.10/0.12.1-SNAPSHOT/mahout-spark-shell_2.10-0.12.1-SNAPSHOT.jar
+```
+
 Run the following (is this nessecary?): 
 ```
 $MAHOUT_HOME/bin/mahout-load-spark-env.sh 
