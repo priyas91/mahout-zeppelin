@@ -7,6 +7,8 @@ Add the following properties to the Spark interpreter in Zeppelin (or create a n
 ```
 spark.kryo.registrator  ->	org.apache.mahout.sparkbindings.io.MahoutKryoRegistrator
 spark.serializer        ->	org.apache.spark.serializer.KryoSerializer
+spark.kryo.referenceTracking -> false
+spark.kryoserializer.buffer  -> 300m
 ```
 
 Add the following dependencies to said interpretter: (TODO: change these to maven)
